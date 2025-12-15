@@ -183,6 +183,7 @@ nav ul li a {
 
 .skills-grid li {
     margin-bottom: 8px;
+	text-align: center;
 }
 
 /* --- Projects Section (The Row Layout) --- */
