@@ -1,76 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Professional Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <header>
-        <div class="container">
-            <h1>[Your Name]</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="your_resume.pdf" target="_blank" class="cta-link">Resume</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Hello, I'm [Your Name]</h2>
-                <p class="tagline">
-                    Full-Stack Developer focused on building scalable solutions and impactful competitive projects.
-                </p>
-                <div class="social-links">
-                    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="profile.jpg" alt="Your Professional Photo">
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h3>About Me</h3>
-            <p>
-                I am a passionate and results-driven [Your Title] with X years of experience in [Key Area]. 
-                My focus is on [Skill 1] and [Skill 2]. I thrive in competitive environments, recently winning 
-                [Award Name] at [Competition Name]. I am always eager to tackle complex problems and turn ideas into tangible products.
-            </p>
-            <div class="skills-grid">
-                <h4>Core Skills:</h4>
-                <ul>
-                    <li>**Languages:** JavaScript, Python, C++</li>
-                    <li>**Frameworks:** React, Node.js, Django</li>
-                    <li>**Tools:** Git, Docker, AWS</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section projects-section">
+<section id="projects" class="section projects-section">
         <div class="container">
             <h3>Featured Projects & Competitions</h3>
-            <div class="project-grid">
-                
-                <article class="project-card">
-                    <img src="project1.jpg" alt="Screenshot of E-commerce Platform">
-                    <div class="project-details">
+            
+            <div class="project-list">
+
+                <article class="project-row">
+                    <div class="project-media">
+                        <img src="project1.jpg" alt="E-commerce Platform Screenshot">
+                        </div>
+
+                    <div class="project-description">
                         <h4>E-commerce Platform Redesign</h4>
+                        <p class="summary-text">
+                            **Summary:** A full-stack application built for high performance, featuring user authentication, payment integration, and a real-time inventory system.
+                        </p>
                         <p>
-                            A full-stack application built for high performance, featuring user authentication, payment integration, and a real-time inventory system.
+                            **Details:** I personally developed the RESTful API using Express.js and implemented the front-end components in React, resulting in a 30% reduction in page load time compared to the legacy system.
                         </p>
                         <p class="tech-stack">**Tech:** React, Express, MongoDB, Stripe</p>
                         <div class="card-links">
@@ -79,13 +24,15 @@
                         </div>
                     </div>
                 </article>
-
-                <article class="project-card competition-card">
-                    <img src="project2.jpg" alt="Screenshot of AI Chatbot">
-                    <div class="project-details">
+                
+                <article class="project-row competition-row">
+                    <div class="project-description">
                         <h4>AI-Powered Chatbot (1st Place Hackathon)</h4>
+                        <p class="summary-text">
+                            **Summary:** Award-winning project at the 'Future Tech' Hackathon. Developed a custom NLP model deployed via a lightweight Flask server.
+                        </p>
                         <p>
-                            Award-winning project at the 'Future Tech' Hackathon. Developed a custom NLP model deployed via a lightweight Flask server.
+                            **Result:** The model achieved an 85% accuracy rate in intent recognition within the 48-hour competition window, showcasing rapid development and deployment skills.
                         </p>
                         <p class="tech-stack">**Tech:** Python, TensorFlow, Flask, AWS Lambda</p>
                         <div class="card-links">
@@ -93,45 +40,33 @@
                             <a href="competition-link.com" target="_blank" class="btn-small">Award Details</a>
                         </div>
                     </div>
+                    
+                    <div class="project-media">
+                        <img src="project2.jpg" alt="AI Chatbot Screenshot">
+                    </div>
                 </article>
 
-                <article class="project-card">
-                    <img src="project3.jpg" alt="Screenshot of Data Visualization Dashboard">
-                    <div class="project-details">
+                <article class="project-row">
+                    <div class="project-media">
+                        <img src="project3.jpg" alt="Data Visualization Dashboard">
+                    </div>
+
+                    <div class="project-description">
                         <h4>Real-Time Data Visualization Dashboard</h4>
+                        <p class="summary-text">
+                            **Summary:** A project focusing on data ingestion and visualization, handling high-volume data streams and displaying insights in a dynamic dashboard.
+                        </p>
                         <p>
-                            A project focusing on data ingestion and visualization, handling high-volume data streams and displaying insights in a dynamic dashboard.
+                            **Focus:** Utilized D3.js for complex charting and optimized PostgreSQL queries for near real-time data fetching, essential for monitoring mission-critical metrics.
                         </p>
                         <p class="tech-stack">**Tech:** Python, Pandas, D3.js, PostgreSQL</p>
                         <div class="card-links">
                             <a href="https://github.com/youruser/project3" target="_blank" class="btn-small">View Code</a>
+                            <a href="https://live-demo.com/project3" target="_blank" class="btn-small">Live Demo</a>
                         </div>
                     </div>
                 </article>
                 
-                </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <h3>Get In Touch</h3>
-            <p>I'm currently seeking roles in [Your desired field]. Let's connect!</p>
-            <a href="mailto:your.email@example.com" class="cta-button">Email Me</a>
-            <p style="margin-top: 20px;">Or find me on:</p>
-            <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> [Your Name]. Crafted with **Modern Code**.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
