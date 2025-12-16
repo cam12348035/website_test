@@ -160,31 +160,71 @@ nav ul li a {
     text-align: center;
 }
 
-.skills-grid {
+.skills-table-container {
     margin-top: 40px;
-    text-align: left;
-    display: inline-block;
+    text-align: right;
     padding: 20px;
     border-radius: 8px;
     background: rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Allows the container to shrink-wrap the table */
+    max-width: 800px;
+    width: 90%;
 }
 
-.skills-grid h4 {
+.skills-table-container h4 {
     color: var(--primary-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-size: 1.2em;
+    text-align: left;
 }
 
-.skills-grid ul {
-    list-style: none;
-    padding: 0;
-    columns: 2; /* Display skills in two columns if space allows */
+.skills-table-container table {
+    width: 100%;
+    border-collapse: collapse; /* Removes double borders */
+    text-align: left;
 }
 
-.skills-grid li {
-    margin-bottom: 8px;
-	text-align: center;
+.skills-table-container td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
 }
+
+.skills-table-container tr:last-child td {
+    border-bottom: none;
+}
+
+.skill-title {
+    width: 35%; /* Gives the title column slightly less space */
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: left;
+}
+
+.skill-list {
+    width: 65%;
+    color: var(--text-color);
+    text-align: right;
+}
+
+/* --- Responsive adjustment for the table --- */
+@media (max-width: 600px) {
+    .skills-table-container table {
+        font-size: 0.9em;
+    }
+    .skills-table-container td {
+        display: block; /* Stacks title and list vertically on small screens */
+        width: 100%;
+        padding: 8px 15px;
+    }
+    .skill-title {
+        background: rgba(0, 0, 0, 0.15); /* Gives stacked title a slight background */
+        font-weight: bold;
+    }
+    .skill-list {
+        margin-bottom: 15px; /* Adds space after the list item */
+    }
+}
+
 
 /* --- Projects Section (The Row Layout) --- */
 .projects-section {
