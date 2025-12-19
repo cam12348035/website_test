@@ -625,3 +625,39 @@ nav a {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media (max-width: 768px) {
+    .associations-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .right-cards-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .right-cards-container > .association-card:nth-child(1),
+    .right-cards-container > .association-card:nth-child(2) {
+        grid-row: auto;
+    }
+
+    .right-bottom-group {
+        grid-column: 1;
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        gap: 15px;
+        font-size: 0.9em;
+    }
+
+    .card-content {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+}
