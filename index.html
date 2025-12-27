@@ -6,19 +6,21 @@
     <title>Camille's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
     <header>
         <div class="container">
-            <a href="index.html#hero" class="logo-link"><h1>Camille's Portfolio</h1></a>
+            <a href="index.html#hero" class="logo-link"><h1 data-key="portfolio">Camille's Portfolio</h1></a>
             <nav>
                 <ul>
-                    <li><a href="#hero">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#associations">Competitions</a></li>
-                    <li><a href="your_resume.pdf" target="_blank" class="cta-link">Resume</a>
-                    </li>
+                    <li><a href="#hero" data-key="about">About</a></li>
+                    <li><a href="#projects" data-key="projects">Projects</a></li>
+                    <li><a href="#associations" data-key="competitions">Competitions</a></li>
+                    <li><a href="your_resume.pdf" target="_blank" class="cta-link" data-key="resume">Resume</a></li>
+                    <li><button id="language-toggle" onclick="toggleLanguage()">FR</button></li>
                 </ul>
             </nav>
         </div>
@@ -27,12 +29,12 @@
     <section id="hero" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Hi, I'm Camille</h2>
-                <p class="bio">
+                <h2 data-key="heroGreeting">Hi, I'm Camille</h2>
+                <p class="bio" data-key="bioText">
                     I am a recent Computer Engineering graduate from Concordia University with experience across a wide range of projects, competitions, and student associations. My skills span robotics, algorithms, electronics, and web development. I have led and been in teams that have designed and built eight robotic systems, both for competitive events and personal projects.
                     Through diverse student leadership roles, I developed strong soft skills, including team leadership, budget management, and resolving logistical and interpersonal challenges. Many of the processes and solutions I implemented are still used within these organizations today.
-                    <br>I am looking for a role where I can design effective, reusable solutions to complex problems while continuously learning new skills, refining my techniques, and contributing knowledge to my team.
                 </p>
+                <p class="bio" data-key="bioText2">I am looking for a role where I can design effective, reusable solutions to complex problems while continuously learning new skills, refining my techniques, and contributing knowledge to my team.</p>
 
             </div>
             <div class="hero-image">
@@ -43,7 +45,7 @@
 
     <section id="projects" class="section projects-section">
         <div class="container">
-            <h3>Main Projects & Competitions</h3>
+            <h3 data-key="mainProjects">Main Projects & Competitions</h3>
             
             <div class="project-list">
 
@@ -53,13 +55,13 @@
                         </div>
 
                     <div class="project-description">
-                        <h4>Newton Robot Capstone Project</h4>
-                        <p class="summary-text">
+                        <h4 data-key="newtonTitle">Newton Robot Capstone Project</h4>
+                        <p class="summary-text" data-key="newtonSummary">
                             Open-source quadruped robot, with Machine Learning capabilites for walking algorithms, and a developed BLDC motor, driver and encoder system, designed to lower the barrier of entry for students, researchers, and hobbyists.
                         </p>
-                        <p class="tech-stack"><strong>Technologies:</strong> BLDC Motors, Encoders, Drivers, Python, I2C, CANbus</p>
+                        <p class="tech-stack"><strong data-key="technologiesLabel">Technologies:</strong> <span data-key="newtonTech">BLDC Motors, Encoders, Drivers, Python, I2C, CANbus</span></p>
                         <div class="card-links">
-                            <a href="newton.html" class="btn-small">Newton Capstone Project</a>
+                            <a href="newton.html" class="btn-small" data-key="newtonLink">Newton Capstone Project</a>
                         </div>
                     </div>
                 </article>
@@ -72,14 +74,14 @@
                         </div>
                     </div>
                     <div class="project-description">
-                        <h4>Engineering Games Machine</h4>
-                        <p class="summary-text">
+                        <h4 data-key="machineTitle">Engineering Games Machine</h4>
+                        <p class="summary-text" data-key="machineSummary">
                             Yearly 4-month robotics competition, where teams of engineering students design, build and program a robot for in response to a challenge, with the final presentation and testing happening at the Quebec Engineering Games/ Jeux de Génie du Québec.
                         </p>
-                        <p class="tech-stack"><strong>Technologies:</strong> Python, C++, Sensors, Motors/Drivers/Servos, Microcontrollers (RaspberryPi, Arduino, ESP32/8266)</p>
+                        <p class="tech-stack"><strong data-key="technologiesLabel">Technologies:</strong> <span data-key="machineTech">Python, C++, Sensors, Motors/Drivers/Servos, Microcontrollers (RaspberryPi, Arduino, ESP32/8266)</span></p>
                         <div class="card-links">
-                            <a href="machine.html" class="btn-small">Machine 2024-2025</a>
-                            <a href="machine.html" class="btn-small">Machine 2023-2024</a>
+                            <a href="machine.html" class="btn-small" data-key="machine2024">Machine 2024-2025</a>
+                            <a href="machine.html" class="btn-small" data-key="machine2023">Machine 2023-2024</a>
                         </div>
                     </div>
                     
@@ -91,14 +93,14 @@
                     </div>
 
                     <div class="project-description">
-                        <h4>Robowars</h4>
-                        <p class="summary-text">
+                        <h4 data-key="robowarsTitle">Robowars</h4>
+                        <p class="summary-text" data-key="robowarsSummary">
                            Yearly robotics competition, where engineering student teams designed and built a autonomous sumo robot to compete against other robotic teams, hosted by IEEE Concordia.
                            Competed for three years, achieving 3rd place in 2025.
                         </p>
-                        <p class="tech-stack"><strong>Technologies:</strong> Sensors (IR, US, LIDAR, Reflectance...), C++, Microcontrollers (Arduino, ESP32), Autonomous systems, Communication Protocols</p>
+                        <p class="tech-stack"><strong data-key="technologiesLabel">Technologies:</strong> <span data-key="robowarsTech">Sensors (IR, US, LIDAR, Reflectance...), C++, Microcontrollers (Arduino, ESP32), Autonomous systems, Communication Protocols</span></p>
                         <div class="card-links">
-                            <a href="machine.html"  class="btn-small">Robowars</a>
+                            <a href="machine.html"  class="btn-small" data-key="robowarsLink">Robowars</a>
                         </div>
                     </div>
                 </article>
@@ -109,42 +111,32 @@
 
     <section id="associations" class="associations-section">
         <div class="container">
-            <h3>Other Competitions</h3>
+            <h3 data-key="otherCompetitions">Other Competitions</h3>
             
             <div class="associations-container">
                 <div class="left-side">
                     <div class="associations-group">
-                        <h4 class="group-title">Canadian/Quebec Engineering Competition</h4>
+                        <h4 class="group-title" data-key="cqiTitle">Canadian/Quebec Engineering Competition</h4>
                         <div class="associations-grid">
                             <article class="association-card">
                                 <div class="card-content">
                                     <div class="card-header">
-                                        <h5>Senior Design</h5>
-                                        <span class="card-date">CQI 2023,2026</span>
+                                        <h5 data-key="seniorDesignTitle">Senior Design</h5>
+                                        <span class="card-date" data-key="seniorDesignDate">CQI 2023,2026</span>
                                     </div>
-                                    <p>A 12 hour design competition in which teams of 4 produce a robotic prototype in response to a problem presented on the same day.</p>
-                                    <ul class="card-skills">
-                                        <li>Firmare Development</li>
-                                        <li>Robotics</li>
-                                        <li>ESP32/8266</li>
-                                        <li>I2C, SPI, UART</li>
-                                    </ul>
+                                    <p data-key="seniorDesignDesc">A 12 hour design competition in which teams of 4 produce a robotic prototype in response to a problem presented on the same day.</p>
+                                    <ul class="card-skills" data-key-array="seniorDesignSkills"></ul>
                                 </div>
                             </article>
 
                             <article class="association-card">
                                 <div class="card-content">
                                     <div class="card-header">
-                                        <h5>Programming</h5>
-                                        <span class="card-date">CQI/CEC 2024,2025</span>
+                                        <h5 data-key="programmingTitle">Programming</h5>
+                                        <span class="card-date" data-key="programmingDate">CQI/CEC 2024,2025</span>
                                     </div>
-                                        <p>A 12-hour programming competition in which teams of four develop a software solution, product, or design, and present their work in competition with other teams.</p>
-                                    <ul class="card-skills">
-                                        <li>Team-Based Development</li>
-                                        <li>Debugging</li>
-                                        <li>Algorithm Design</li>
-                                        <li>Python, C++, Register-Level</li>
-                                    </ul>
+                                        <p data-key="programmingDesc">A 12-hour programming competition in which teams of four develop a software solution, product, or design, and present their work in competition with other teams.</p>
+                                    <ul class="card-skills" data-key-array="programmingSkills"></ul>
                                 </div>
                             </article>
                         </div>
@@ -154,31 +146,21 @@
                     <article class="association-card">
                         <div class="card-content">
                             <div class="card-header">
-                                <h5>Concordia 2022 Student Leadership Conference</h5>
+                                <h5 data-key="concordiaLeadershipTitle">Concordia 2022 Student Leadership Conference</h5>
                             </div>
-                            <p>CASAxECA Consulting Competition, acheived 2nd place after developing a solution to a business consulting problem.</p>
-                            <ul class="card-skills">
-                                <li>Oral Communication</li>
-                                <li>Critical Thinking</li>
-                                <li>Research</li>
-                                <li>Argumentation</li>
-                            </ul>
+                            <p data-key="concordiaLeadershipDesc">CASAxECA Consulting Competition, acheived 2nd place after developing a solution to a business consulting problem.</p>
+                            <ul class="card-skills" data-key-array="concordiaLeadershipSkills"></ul>
                         </div>
                     </article>
 
                     <article class="association-card">
                         <div class="card-content">
                             <div class="card-header">
-                                <h5>GNCTR Volunteer/Organizing Committee</h5>
-                                <span class="card-date">2025</span>
+                                <h5 data-key="gnctrTitle">GNCTR Volunteer/Organizing Committee</h5>
+                                <span class="card-date" data-key="gnctrDate">2025</span>
                             </div>
-                            <p>Participated in the organization of the largest engineering competition in Canada, including managing transportation, teams and activities.</p>
-                            <ul class="card-skills">
-                                <li>Oral Communication</li>
-                                <li>Group Organization</li>
-                                <li>Leadership</li>
-                                <li>Problem Solving</li>
-                            </ul>
+                            <p data-key="gnctrDesc">Participated in the organization of the largest engineering competition in Canada, including managing transportation, teams and activities.</p>
+                            <ul class="card-skills" data-key-array="gnctrSkills"></ul>
                         </div>
                     </article>
                     </div>
@@ -188,66 +170,46 @@
                     <article class="association-card">
                         <div class="card-content">
                             <div class="card-header">
-                                <h5>IEEE Extreme Hackathon</h5>
-                                <span class="card-date">2022-2024</span>
+                                <h5 data-key="ieeeTitle">IEEE Extreme Hackathon</h5>
+                                <span class="card-date" data-key="ieeeDate">2022-2024</span>
                             </div>
-                            <p>Overnight international algorithms and problem-solving competition, with questions getting harder over the course of the 24hrs. Achieved 1st QC, 2nd CA in 2022.</p>
-                            <ul class="card-skills">
-                                <li>Algorithm Development</li>
-                                <li>Team Coding</li>
-                                <li>Problem Solving</li>
-                                <li>Efficient design</li>
-                            </ul>
+                            <p data-key="ieeeDesc">Overnight international algorithms and problem-solving competition, with questions getting harder over the course of the 24hrs. Achieved 1st QC, 2nd CA in 2022.</p>
+                            <ul class="card-skills" data-key-array="ieeeSkills"></ul>
                         </div>
                     </article>
 
                     <article class="association-card">
                         <div class="card-content">
                             <div class="card-header">
-                                <h5>Concordia Englympics/Engweek</h5>
-                                <span class="card-date">2021-2025</span>
+                                <h5 data-key="englympicsTitle">Concordia Englympics/Engweek</h5>
+                                <span class="card-date" data-key="englympicsDate">2021-2025</span>
                             </div>
-                            <p>Participated in a litany of different engineering competitions, ranging from debates, software, consulting and more</p>
-                            <ul class="card-skills">
-                                <li>Oral Communication</li>
-                                <li>Adaptability</li>
-                                <li>Python, C++</li>
-                                <li>Hardware/Electronics</li>
-                            </ul>
+                            <p data-key="englympicsDesc">Participated in a litany of different engineering competitions, ranging from debates, software, consulting and more</p>
+                            <ul class="card-skills" data-key-array="englympicsSkills"></ul>
                         </div>
                     </article>
 
                     <div class="right-bottom-group">
-                        <h4 class="group-title">Engineering Games</h4>
+                        <h4 class="group-title" data-key="engGamesTitle">Engineering Games</h4>
                         <article class="association-card">
                             <div class="card-content">
                                 <div class="card-header">
-                                    <h5>Case/Consulting Competition</h5>
-                                    <span class="card-date">2023, 2024</span>
+                                    <h5 data-key="caseTitle">Case/Consulting Competition</h5>
+                                    <span class="card-date" data-key="caseDate">2023, 2024</span>
                                 </div>
-                                <p>Developped a product or a complex solution to a given problem, and presented it to a judging panel of professionals and sponsors, acheiving 1st place in 2024.</p>
-                                <ul class="card-skills">
-                                    <li>Oral Communcation/Presentation</li>
-                                    <li>Solution Making</li>
-                                    <li>Team Communication</li>
-                                    <li>Dynamic Research</li>
-                                </ul>
+                                <p data-key="caseDesc">Developped a product or a complex solution to a given problem, and presented it to a judging panel of professionals and sponsors, acheiving 1st place in 2024.</p>
+                                <ul class="card-skills" data-key-array="caseSkills"></ul>
                             </div>
                         </article>
 
                         <article class="association-card">
                             <div class="card-content">
                                 <div class="card-header">
-                                    <h5>Computer Academic Competition</h5>
-                                    <span class="card-date">2025</span>
+                                    <h5 data-key="computerTitle">Computer Academic Competition</h5>
+                                    <span class="card-date" data-key="computerDate">2025</span>
                                 </div>
-                                <p>Participated in a 6 hour academic computer engineering competition, with questions ranging from Python and Computer Science knowledge to register-level programming and Shakespeare programming language.</p>
-                                <ul class="card-skills">
-                                    <li>Software</li>
-                                    <li>Register-Level</li>
-                                    <li>Embedded Programming</li>
-                                    <li>Python</li>
-                                </ul>
+                                <p data-key="computerDesc">Participated in a 6 hour academic computer engineering competition, with questions ranging from Python and Computer Science knowledge to register-level programming and Shakespeare programming language.</p>
+                                <ul class="card-skills" data-key-array="computerSkills"></ul>
                             </div>
                         </article>
                     </div>

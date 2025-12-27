@@ -6,17 +6,20 @@
     <title>Camille's Portfolio - Newton Robot Capstone</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="index.html#hero" class="logo-link"><h1>Camille's Portfolio</h1></a>
+            <a href="index.html#hero" class="logo-link"><h1 data-key="portfolio">Camille's Portfolio</h1></a>
             <nav>
                 <ul>
-                    <li><a href="index.html#hero">About</a></li>
-                    <li><a href="index.html#projects">Projects</a></li>
-                    <li><a href="index.html#associations">Competitions</a></li>
-                    <li><a href="your_resume.pdf" target="_blank" class="cta-link">Resume</a></li>
+                    <li><a href="index.html#hero" data-key="about">About</a></li>
+                    <li><a href="index.html#projects" data-key="projects">Projects</a></li>
+                    <li><a href="index.html#associations" data-key="competitions">Competitions</a></li>
+                    <li><a href="your_resume.pdf" target="_blank" class="cta-link" data-key="resume">Resume</a></li>
+                    <li><button id="language-toggle" onclick="toggleLanguage()">FR</button></li>
                 </ul>
             </nav>
         </div>
@@ -28,14 +31,14 @@
         <div class="container">
             <div class="overview-grid">
                 <div class="overview-text">
-                    <h1>Newton Robot Capstone Project</h1>
-                    <p>
+                    <h1 data-key="newtonCapstone">Newton Robot Capstone Project</h1>
+                    <p data-key="newtonOverview1">
                         The Newton Project was an interdisciplinary capstone project aimed at designing and developing an accessible, modular and cost-effective quadruped robotic platform. The primary objective was lowering the barrier of entry for students, hobbyists and researchers interested in the field of legged locomotion and more advanced robotics, beyond the level of Arduino and other entry-level platforms.
                     </p>
-                    <p>
+                    <p data-key="newtonOverview2">
                         In practical terms, the project aimed to deliver a fully functional quadruped robot with 12 degrees of freedom, 3D-printable parts, cheap and cost-effective electronics, and a high interchangeability of components, as well as a software platform for a reinforcement learning system. The project was done in a team of 7 engineering students from different backgrounds and majors.
                     </p>
-                    <p>
+                    <p data-key="newtonOverview3">
                         My role in the team was as the main designer for the electrical, hardware and firmware system, with iterative testing and integration of many motors, drivers and encoder systems, a large amount of wiring, assembly and soldering, as well as a wide use of communication protocols and low-level embedded software. This was also conducted in parallel with the rest of the team, from the mechanical design to the software and RL implementation.
                     </p>
                 </div>
@@ -50,48 +53,57 @@
         <div class="container">
             <div class="project-grid">
                 <div class="detail-section">
-                    <h3>Hardware Development</h3>
-                    <p>
+                    <h3 data-key="newton1Title">Hardware</h3>
+                    <p data-key="newton1Desc">
                         Custom BLDC motor design optimized for quadruped locomotion. Integrated motor drivers and high-precision encoder systems enable accurate position feedback and coordinated leg movement. The frame is constructed using lightweight materials to maximize efficiency.
                     </p>
                     <ul class="tech-list">
-                        <li>BLDC Motors</li>
-                        <li>Custom Motor Drivers</li>
-                        <li>Rotary Encoders</li>
-                        <li>Microcontroller Integration</li>
+                        <li data-key="newton1Item1">BLDC Motors</li>
+                        <p class="tech-list-subtext" data-key="newton1Item1Desc">Placeholder: Description of custom BLDC motor design</p>
+                        <li data-key="newton1Item2">Custom Motor Drivers</li>
+                        <p class="tech-list-subtext" data-key="newton1Item2Desc">Details about driver implementation and control</p>
+                        <li data-key="newton1Item3">Rotary Encoders</li>
+                        <p class="tech-list-subtext" data-key="newton1Item3Desc">Placeholder: Encoder integration and feedback systems</p>
+                        <li data-key="newton1Item4">Microcontroller Integration</li>
+                        <p class="tech-list-subtext" data-key="newton1Item4Desc">Placeholder: Microcontroller selection and firmware architecture</p>
                     </ul>
                 </div>
                 <div class="project-images">
                     <img src="images/newton_driver.webp" alt="Newton Robot Hardware" class="image-1">
                     <img src="images/newton_encoder.webp" alt="Newton Robot Hardware" class="image-2">
-                    <img src="images/newton_motor.jpg" alt="Newton Robot Hardware" class="image-3">
                 </div>
 
 
                 <div class="detail-section">
-                    <h3>Software & ML</h3>
-                    <p>
-                        Newton uses Python-based machine learning algorithms to optimize walking patterns and adapt to different terrain conditions. The system learns efficient gait parameters through reinforcement learning and simulation.
+                    <h3 data-key="newton2Title">Control & Firmware</h3>
+                    <p data-key="newton2Desc">
+                        As before, the main objective in the control and firmware system was to establish a simple and linear layout, allowing for easy learning and modifications.
                     </p>
                     <ul class="tech-list">
-                        <li>Python ML Frameworks</li>
-                        <li>Gait Optimization</li>
-                        <li>Real-time Control Loop</li>
-                        <li>Sensor Data Processing</li>
+                        <li data-key="newton2Item1">Python ML Frameworks</li>
+                        <li data-key="newton2Item2">Gait Optimization</li>
+                        <li data-key="newton2Item3">Real-time Control Loop</li>
                     </ul>
+                </div>
+                <div class="project-image-single">
+                    <img src="images/newton_firmware.png" alt="Newton Firmware Diagram" class="image-single">
                 </div>
 
                 <div class="detail-section">
-                    <h3>Communication Protocols</h3>
-                    <p>
-                        Multi-protocol support allows seamless integration with various microcontrollers and sensors. The system uses I2C for sensor communication and CANbus for motor control synchronization across all four legs.
-                    </p>
+                    <h3 data-key="newton3Title">Simulation and RL</h3>
                     <ul class="tech-list">
-                        <li>I2C Protocol</li>
-                        <li>CANbus</li>
-                        <li>Serial Communication</li>
-                        <li>Sensor Fusion</li>
+                        <li data-key="newton3Item1"></li>
+                        <li data-key="newton3Item2"></li>
+                        <li data-key="newton3Item3"></li>
                     </ul>
+                </div>
+                <div class="project-video">
+                    <iframe src="https://www.youtube.com/embed/r2hiDxOyJU4" 
+                        title="Newton Robot Simulation" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -100,8 +112,8 @@
     <section class="project-footer">
         <div class="container">
             <div class="footer-content">
-                <h2>Want to see more projects?</h2>
-                <a href="index.html#projects" class="btn-primary">Back to Portfolio</a>
+                <h2 data-key="wantMore">Want to see more projects?</h2>
+                <a href="index.html#projects" class="btn-primary" data-key="backPortfolio">Back to Portfolio</a>
             </div>
         </div>
     </section>
